@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember Watch</title>
+    <link rel="shortcut icon" href="images/emberwatch_logoblack_removebg.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("howtouseNavItem").addEventListener("click", function (event) {
+                event.preventDefault();
+                scrollToSection("howToUse");
+            });
+
+            document.getElementById("aboutNavItem").addEventListener("click", function (event) {
+                event.preventDefault();
+                scrollToSection("aboutUs");
+            });
+        });
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="navbar navbar-expand-lg nav p-2">
+    <div class="container-fluid fw-bolder fs-8">
+      <a class="navbar-brand text-white d-flex" style="pointer-events: none;" href="#">
+        <img src="images/emberwatch_logo_only-removebg.png" width="70" height="70" class="d-flex align-text-vertical">
+        <p id="appname" class="mt-3 ms-2">Ember Watch</p>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" data-bs-theme="dark" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- HOME -->
+          <li class="nav-item ms-3">
+            <a href="" class="nav-link active text-white p-2" aria-current="page">Home</a>
+          </li>
+  
+          <!-- How to use -->
+          <li class="nav-item ms-3 fw-normal">
+            <a id="howtouseNavItem" class="nav-link text-white" aria-current="page" href="#">How to use</a>
+          </li>
+  
+          <!-- ABOUT -->
+          <li class="nav-item ms-3 fw-normal">
+            <a id="aboutNavItem" class="nav-link text-white" aria-current="page" href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+      <!-- DOWNLOAD-->
+      <div id="home">
+        <div class="m-5 shadow-lg bg-light rounded-3">
+            <div class="container col-xxl-8 px-3 py-5 text-white mt-5 mb-5">
+                <div class="row flex-lg-row-reverse justify-content-center align-items-center g-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="images/emberwatch_blackedition.png" class="w-100 mx-auto" alt="">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 id="app-name" class="display-5 fw-bold  lh-1 mb-3 text-black">EMBER WATCH: Smoke & Fire Detection</h1>
+                    <p id="appname-desc" class="lead text-black">Ember Watch is a safety awareness application designed to detect smoke and fire. Our innovative technology aims to provide individuals and businesses with an early warning system, ensuring prompt action and minimizing potential damages. With Ember Watch, safety is just a tap away.</p>
+                    <a href=""><button class="btn btn-outline-success p-2 fs-5 fw-bold">DOWNLOAD NOW</button></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+
+    <!-- HOW TO USE -->
+    <div id="howToUse">
+        <div class="row row-cols-1 row-cols-md-2 align-items-md-center px-5 mx-4" style="margin-top: 150px;">
+            <div class="col d-flex flex-column align-items-start gap-2">
+              <h1 id="howtouse" class="fw-bold">HOW TO USE?</h1>
+              <p id="htu-desc" class="lead">Discover the simple steps to enhance your safety with smoke and fire sensors. Learn to use them effectively by registering your account, strategically placing the sensor, and initiating emergency calls when needed. This concise guide empowers you to take swift and decisive actions for a secure environment.</p>
+            </div>
+      
+            <div class="col">
+              <div class="row row-cols-1 row-cols-sm-2 g-4">
+                <div class="col d-flex flex-column gap-2">
+      
+                  <h4 class="fw-semibold mb-0 ">Register your account</h4>
+                  <p id="htu-desc" class="lead">In order to utilize all of our system capabilities, you must first register to access the main application. Simply input your credentials.</p>
+                </div>
+      
+                <div class="col d-flex flex-column gap-2">
+                  <h4 class="fw-semibold mb-0">Fire Sensor</h4>
+                  <p id="htu-desc" class="lead">Place your sensor where you think there may be a chance of a fire. Additionally, the sensor will alert the user's linked mobile devices if it detects smoke or fire.</p>
+                </div>
+      
+                <div class="col d-flex flex-column gap-2">
+                  <h4 class="fw-semibold mb-0 ">Contacts</h4>
+                  <p id="htu-desc" class="lead">Once the fire sensor detects smoke or fire, you can contact the available fire stations on the contact lists for emergencies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+
+    <!-- ABOUT US -->
+    <div id="aboutUs">
+        <div class="container discover text-white" style="margin-bottom: 150px; margin-top: 100px;">>
+            <div class="text-center rounded-3">
+              <h1 class="text-black fw-bold">ABOUT US</h1>
+              <p id="aboutus-desc" class="col-lg-8 mx-auto fs-5 text-black lead">
+                Welcome to Ember Watch, where innovation and safety collide. Our app is a state-of-the-art safety awareness tool that has been painstakingly designed to quickly identify fire and smoke. We take great satisfaction in developing modern equipment that acts as an early warning system, enabling people to act quickly to minimize potential harm. Your safety is our top priority at Ember Watch, and help is only a tap away. As a team, we are a powerful force dedicated to improving community, commercial, and residential safety across the globe. We have always strived for perfection because we think everyone should have access to the peace of mind that comes with high-quality smoke and fire alarm systems.
+              </p>
+            </div>
+          </div>
+    </div>
+
+      <footer class="p-2 text-center mt-5">
+        <div class="container">
+            <div class="container">
+              <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                  <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                  </a>
+                  <p id="footer-desc">All Right Reserved By &copy; 2024 EMBER WATCH</p>
+                </div>
+                  </footer>
+                </div>
+        </div>
+    </footer>   
+
+</body>
+</html>
